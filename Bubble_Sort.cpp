@@ -66,3 +66,11 @@ void bubbleSort()
         cout << endl;
     }
 }
+int main()
+{
+    input();
+    bubbleSort();
+    display();
+
+    return 0;
+}
