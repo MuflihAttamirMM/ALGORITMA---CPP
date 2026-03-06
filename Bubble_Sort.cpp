@@ -18,3 +18,7 @@ void input()
     {
             cout << "ERROR : Maksimum Panjang Array adalah 20\n";
     }
+    cout << endl;
+    cout << "=====================" << endl;
+    cout << "Masukkan Elemen Array" << endl;
+    cout << "=====================" << endl;
