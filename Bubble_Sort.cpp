@@ -11,19 +11,20 @@ void input()
         cout << "Masukkan Panjang Array: ";
         cin >> n;
 
-        if (n <= 20)
+        // Ditambahkan n > 0 agar panjang array tidak minus/nol
+        if (n > 0 && n <= 20) 
             break;
-    }
         else
-    {
-            cout << "ERROR : Maksimum Panjang Array adalah 20\n";
+        {
+            cout << "ERROR : Panjang Array harus antara 1 sampai 20\n";
+        }
     }
     cout << endl;
     cout << "=====================" << endl;
     cout << "Masukkan Elemen Array" << endl;
     cout << "=====================" << endl;
     
-    for (int i = 0; i < n; i++) //i++ / i = i + 1
+    for (int i = 0; i < n; i++) 
     {
         cout << "Masukkan Nilai Ke -" << (i + 1) << " : ";
         cin >> a[i];
@@ -39,19 +40,21 @@ void display ()
 
     for (int i = 0; i < n; i++)
     {
-        cout << "Data Ke -" << i + 1 << " : ";
+        // PERBAIKAN: Menambahkan a[i] dan endl
+        cout << "Data Ke -" << i + 1 << " : " << a[i] << endl; 
     }
 }
+
 void bubbleSort()
 {
     cout << "\n=================" << endl;
     cout << "\nHasil Setiap Pass" << endl;
     cout << "\n=================" << endl;
-    for (int pass = 1; pass < n; Pass++)
+    for (int pass = 1; pass < n; pass++)
     {
         for (int j = 0; j <= n - 1 - pass; j++)
         {
-            if (a[j] > a[j +1])
+            if (a[j] > a[j + 1])
             {
                 int temp = a[j];
                 a[j] = a[j + 1];
@@ -61,11 +64,13 @@ void bubbleSort()
         cout << "pass ke -" << pass << ":\t";
         for (int k = 0; k < n; k++)
         {
-            cout << a [k] << "/t";
+            // PERBAIKAN: Mengganti /t menjadi \t
+            cout << a[k] << "\t"; 
         }
         cout << endl;
     }
 }
+
 int main()
 {
     input();
